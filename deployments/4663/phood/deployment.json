@@ -1,0 +1,65 @@
+{
+  "network": "Robinhood Chain mainnet",
+  "chainId": 4663,
+  "name": "PAPERHOOD",
+  "symbol": "PHOOD",
+  "decimals": 18,
+  "totalSupply": "1000000000",
+  "totalSupplyUnits": "1000000000000000000000000000",
+  "deployer": "0xD083f0d09ed4234B92bC8D1607E1fE7550AC7882",
+  "treasury": "0xD083f0d09ed4234B92bC8D1607E1fE7550AC7882",
+  "contractAddress": "0xb0f09c8bEC180aFEFE32C1D5bab1402121a1bBBE",
+  "transactionHash": "0xda863a8c175f11aca10db292e2e5d58d9b076d840995a3c4ed1b9b0c93355685",
+  "nonce": 2,
+  "status": "deployed",
+  "createdAt": "2026-10-20T03:04:44.937Z",
+  "gasLimit": "611284",
+  "maximumFeeETH": "0.000024627409792",
+  "compiler": {
+    "version": "0.8.30+commit.73712a01"
+  },
+  "compilerSettings": {
+    "remappings": [
+      "@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/"
+    ],
+    "optimizer": {
+      "enabled": true,
+      "runs": 1
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "compilationTarget": {
+      "src/PHOOD.sol": "PHOOD"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "viaIR": true
+  },
+  "constructorArguments": "0x000000000000000000000000d083f0d09ed4234b92bc8d1607e1fe7550ac78820000000000000000000000000000000000000000033b2e3c9fd0803ce8000000",
+  "verification": {
+    "status": "verified",
+    "source": "user-confirmed",
+    "note": "用户确认已手动完成 Blockscout 源码验证；本地未再次调用验证 API。",
+    "reportedOn": "2026-10-20"
+  },
+  "blockNumber": 93126645,
+  "gasUsed": "503190",
+  "transactionFeeETH": "0.0000100688319",
+  "runtimeBytes": 1543,
+  "checkedAt": "2026-10-20T03:04:54.768Z",
+  "explorer": "https://robinhoodchain.blockscout.com/address/0xb0f09c8bEC180aFEFE32C1D5bab1402121a1bBBE",
+  "checks": [
+    "name",
+    "symbol",
+    "18 decimals",
+    "fixed issuance of 1 billion",
+    "entire supply received by treasury",
+    "runtime bytecode matches compiled artifact"
+  ],
+  "notes": [
+    "固定总量 ERC20，部署时一次发行 1,000,000,000 PHOOD，无后续增发入口。",
+    "这是 Token 合约，不是 IDO 合约。",
+    "全部代币首次发放到部署钱包；后续转账不会改变此处的首次发行记录。"
+  ]
+}

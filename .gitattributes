@@ -1,0 +1,3 @@
+# Preserve exact deployed source bytes for metadata/source verification.
+src/PHOOD.sol -text
+deployments/4663/phood/PHOOD.sol -text

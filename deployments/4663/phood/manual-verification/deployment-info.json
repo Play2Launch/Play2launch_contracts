@@ -1,0 +1,33 @@
+{
+  "network": "Robinhood Chain mainnet",
+  "chainId": 4663,
+  "contractAddress": "0xb0f09c8bEC180aFEFE32C1D5bab1402121a1bBBE",
+  "transactionHash": "0xda863a8c175f11aca10db292e2e5d58d9b076d840995a3c4ed1b9b0c93355685",
+  "name": "PAPERHOOD",
+  "symbol": "PHOOD",
+  "decimals": 18,
+  "totalSupply": "1000000000",
+  "treasury": "0xD083f0d09ed4234B92bC8D1607E1fE7550AC7882",
+  "compiler": {
+    "version": "0.8.30+commit.73712a01"
+  },
+  "compilerSettings": {
+    "remappings": [
+      "@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/"
+    ],
+    "optimizer": {
+      "enabled": true,
+      "runs": 1
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "compilationTarget": {
+      "src/PHOOD.sol": "PHOOD"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "viaIR": true
+  },
+  "constructorArguments": "0x000000000000000000000000d083f0d09ed4234b92bc8d1607e1fe7550ac78820000000000000000000000000000000000000000033b2e3c9fd0803ce8000000"
+}

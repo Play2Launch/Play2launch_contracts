@@ -1,0 +1,26 @@
+已部署合约地址清单
+==================
+
+# 此文件自动生成。部署成功并完成链上核对后，部署脚本自动更新。
+# 手动刷新：make addresses（只读本地部署记录，不访问私钥，不发送交易）。
+# 数据来源：deployments/ 下的 deployment.json；仅收录 status=deployed 的成功记录。
+# 后续新合约请使用独立部署目录保留历史，并在部署脚本成功后调用 updateDeployedContracts()。
+# 不要手工修改本清单；备注和验证状态请维护在对应 deployment.json 中。
+# 测试脚本的 testnet-runs/ 不混入正式部署清单；本文件不包含任何私钥。
+
+[PHOOD · Robinhood Chain mainnet]
+网络 Chain ID：4663
+合约地址：0xb0f09c8bEC180aFEFE32C1D5bab1402121a1bBBE
+名称：PAPERHOOD
+部署交易：0xda863a8c175f11aca10db292e2e5d58d9b076d840995a3c4ed1b9b0c93355685
+部署区块：93126645
+部署钱包：0xD083f0d09ed4234B92bC8D1607E1fE7550AC7882
+首次代币接收钱包：0xD083f0d09ed4234B92bC8D1607E1fE7550AC7882
+发行总量：1000000000 PHOOD
+精度：18
+浏览器：https://robinhoodchain.blockscout.com/address/0xb0f09c8bEC180aFEFE32C1D5bab1402121a1bBBE
+源码验证：已完成（用户手动验证并确认）
+# 固定总量 ERC20，部署时一次发行 1,000,000,000 PHOOD，无后续增发入口。
+# 这是 Token 合约，不是 IDO 合约。
+# 全部代币首次发放到部署钱包；后续转账不会改变此处的首次发行记录。
+详细记录：deployments/4663/phood/deployment.json
