@@ -1,10 +1,14 @@
 # Run from PlayToLaunch_contracts. Uses the project's pinned Forge installation.
 # PHOOD is already deployed; use verify-phood to publish its source, not deploy-phood.
 NODE ?= node
+AIRDROP_CONFIG ?= config/airdrop-phood-mainnet.json
 .DEFAULT_GOAL := help
-.PHONY: help build test deploy-phood verify-phood verify-phood-force verify-phood-command phood-status addresses
+.PHONY: deploy-airdrop deploy-airdrop-check deploy-airdrop-testnet help build test deploy-phood verify-phood verify-phood-force verify-phood-command phood-status addresses
 
 help:
+	@echo "make deploy-airdrop-check  Validate AIRDROP_CONFIG without keys, RPC or transactions"
+	@echo "make deploy-airdrop        Deploy/resume the configured airdrop and update DEPLOYED_CONTRACTS.txt"
+	@echo "make deploy-airdrop-testnet Resume the existing local PHOOD testnet deployment"
 	@echo "make verify-phood          Verify the existing mainnet PHOOD contract"
 	@echo "make verify-phood-force    Skip Forge's already-verified precheck"
 	@echo "make verify-phood-command  Print verification command without submitting"
@@ -39,3 +43,18 @@ phood-status:
 
 addresses:
 	$(NODE) script/update-deployed-contracts.mjs
+
+# Default: prepared PHOOD mainnet config. For another activity, copy config/airdrop.example.json.
+# Example: make deploy-airdrop AIRDROP_CONFIG=config/airdrop.json
+# Keys stay in .secrets/*.json; never supply a private key in Make arguments.
+# Reuse the same deploymentName to resume; use a NEW name for a different deployment.
+deploy-airdrop-check:
+	$(NODE) script/deploy-airdrop.mjs --config="$(AIRDROP_CONFIG)" --dry-run
+
+deploy-airdrop: build
+	$(NODE) script/deploy-airdrop.mjs --config="$(AIRDROP_CONFIG)"
+
+# Historical testnet helper is bound to local activity cp2azzme0n5534.
+# Do not use it for an activity with a different database ID, even if its slug is phood.
+deploy-airdrop-testnet: build
+	$(NODE) script/deploy-testnet-airdrop.mjs

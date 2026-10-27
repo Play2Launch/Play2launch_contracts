@@ -152,3 +152,36 @@ This is a new, non-upgradeable deployment. Existing contracts retain V1 behavior
 The `vesting-config.mjs` helper selects the V1 or V2 configuration selector for historical test scripts. Fresh V2 short tests use the same short cliff/duration for both allocations; production recommendations are the 30/90-day settings above, also available as the Admin preset.
 
 The pinned Solidity 0.8.30 build uses via-IR and optimizer_runs=1 to fit EIP-170. The test suite checks deployed bytecode length; retain this deployment-size check for future changes.
+
+
+## Airdrop 部署（Makefile）
+
+默认 `make deploy-airdrop` 使用已填好的 `config/airdrop-phood-mainnet.json`，绑定正式活动 `cp2by1lsd3fuo0`。
+部署钱包与合约管理员为 PHOOD Creator `0xD083f0d09ed4234B92bC8D1607E1fE7550AC7882`；
+领取授权签名钱包复用主网 Signer B `0x4712Af8D8FC28b4378087452E8Ffa3C03ba51A63`。
+正式后台必须录入并选择该签名钱包。配置文件只含公开地址及私钥文件路径，实际私钥不提交。
+先运行 `make deploy-airdrop-check` 检查，再运行 `make deploy-airdrop` 执行主网部署。
+
+其他活动或网络使用独立配置：
+
+1. 将 `config/airdrop.example.json` 复制为 `config/airdrop.json`。
+2. 填写后台活动空投编辑页显示的 `campaignHash`，以及 `admin`、`signer`、`deployer` 地址。
+   `token` 是发放代币地址；示例为主网 PHOOD。`chainId` 支持 4663 / 46630。
+   `campaignID` 可留空；填写时必须与后台活动 Hash 匹配。
+   `keyFile` 指向 `.secrets/` 内的 JSON，结构为 `{"privateKey":"..."}`；不会将私钥写入公开记录。
+3. 先检查配置，再执行部署：
+
+```sh
+make deploy-airdrop-check AIRDROP_CONFIG=config/airdrop.json
+make deploy-airdrop AIRDROP_CONFIG=config/airdrop.json
+```
+
+检查命令不读取私钥、不连接 RPC、不发送交易。部署命令会构建合约，验证链 ID、部署钱包、Token 合约和最高手续费，等待两次确认并核对部署结果。
+管理员可以与部署钱包不同；签名钱包须与后台选中的领取授权签名钱包一致。
+
+成功后自动写入 `deployments/<chainId>/<deploymentName>/deployment.json` 和 `abi.json`，并刷新 `DEPLOYED_CONTRACTS.txt`，包含合约地址、活动标识、Token、管理员、签名钱包、部署交易及区块。源码验证状态初始为 pending，本命令不自动验证源码。
+
+相同配置重新执行会读取原交易记录并恢复/核对原部署，不重复发合约。不要删除部署记录重试；新部署使用新的 `deploymentName`。如果进程被强制终止留下 `deploy.lock`，确认没有部署进程运行后才移除该文件，再重试原命令。
+
+`make deploy-airdrop-testnet` 只用于原有本地 PHOOD 测试活动，不能用于正式活动；其成功记录同样自动写入地址清单。
+`make addresses` 可从已有成功部署记录重新生成清单，不发送交易。部署本身不会结算、注资或开放领取。

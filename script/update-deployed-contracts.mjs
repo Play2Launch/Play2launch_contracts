@@ -42,6 +42,7 @@ export async function updateDeployedContracts() {
     if(r.fundsTreasury)lines.push(`募集资金收款钱包：${r.fundsTreasury}`);
     if(r.admin)lines.push(`管理员钱包 A：${r.admin}`);
     if(r.signer)lines.push(`资格签名钱包 B：${r.signer}`);
+    if(r.token)lines.push(`空投发放 Token 地址：${r.token}`);
     if(r.paymentToken)lines.push(`支付代币地址：${r.paymentToken}`);
     if(r.campaignId)lines.push(`活动标识：${r.campaignId}`);
     if(r.totalSupply)lines.push(`发行总量：${r.totalSupply} ${r.symbol||''}`);

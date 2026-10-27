@@ -9,3 +9,7 @@ broadcast/
 testnet-runs/
 TEST-WALLETS-LOCAL.txt
 *.log
+
+config/airdrop.json
+deployments/**/deploy.lock
+deployments/**/deployment.json.tmp

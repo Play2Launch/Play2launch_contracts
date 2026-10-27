@@ -1,0 +1,14 @@
+{
+  "name": "PAPERHOOD Airdrop",
+  "deploymentName": "airdrop-phood-production",
+  "chainId": 4663,
+  "campaignHash": "COPY_THE_0x_ACTIVITY_HASH_FROM_ADMIN",
+  "campaignID": "",
+  "campaignSlug": "phood",
+  "token": "0xb0f09c8bEC180aFEFE32C1D5bab1402121a1bBBE",
+  "admin": "FILL_CONTRACT_OWNER_ADDRESS",
+  "signer": "FILL_CLAIM_AUTHORIZATION_SIGNER_ADDRESS",
+  "deployer": "FILL_DEPLOYMENT_WALLET_ADDRESS",
+  "keyFile": ".secrets/mainnet-deployer.json",
+  "maxFeeETH": "0.001"
+}
