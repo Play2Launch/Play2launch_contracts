@@ -1,0 +1,15 @@
+IDO 主网源码验证
+合约：0xeFb74A8EBB0cE4F02e3720E8179D8B960E23Fe94
+浏览器：https://robinhoodchain.blockscout.com/address/0xeFb74A8EBB0cE4F02e3720E8179D8B960E23Fe94
+验证入口：https://robinhoodchain.blockscout.com/address/0xeFb74A8EBB0cE4F02e3720E8179D8B960E23Fe94/contract-verification
+方式：Solidity (Standard JSON Input)
+编译器：v0.8.30+commit.73712a01
+合约：src/PhoodIDO.sol:PhoodIDO
+上传：standard-input.json（包含所有依赖源码和准确编译设置）
+构造参数：constructor-arguments.txt
+Optimizer：启用，runs=1；Via IR：启用；EVM：cancun
+Forge 请求被浏览器 Cloudflare 验证拦截，尚未完成源码验证。
+
+认购时间：温哥华 2026-10-19 21:40 至 2026-10-26 21:40。
+后台部署区块：93177191
+后续仍需绑定 PHOOD、注入销售代币，以及配置 TGE/Vesting。

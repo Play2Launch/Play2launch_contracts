@@ -39,6 +39,11 @@ export async function updateDeployedContracts() {
       `名称：${r.name||'未记录'}`,`部署交易：${r.transactionHash}`,
       `部署区块：${r.blockNumber??'未记录'}`,`部署钱包：${r.deployer||'未记录'}`);
     if(r.treasury)lines.push(`首次代币接收钱包：${r.treasury}`);
+    if(r.fundsTreasury)lines.push(`募集资金收款钱包：${r.fundsTreasury}`);
+    if(r.admin)lines.push(`管理员钱包 A：${r.admin}`);
+    if(r.signer)lines.push(`资格签名钱包 B：${r.signer}`);
+    if(r.paymentToken)lines.push(`支付代币地址：${r.paymentToken}`);
+    if(r.campaignId)lines.push(`活动标识：${r.campaignId}`);
     if(r.totalSupply)lines.push(`发行总量：${r.totalSupply} ${r.symbol||''}`);
     if(r.decimals!==undefined)lines.push(`精度：${r.decimals}`);
     if(r.explorer)lines.push(`浏览器：${r.explorer}`);

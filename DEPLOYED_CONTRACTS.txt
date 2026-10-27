@@ -24,3 +24,39 @@
 # 这是 Token 合约，不是 IDO 合约。
 # 全部代币首次发放到部署钱包；后续转账不会改变此处的首次发行记录。
 详细记录：deployments/4663/phood/deployment.json
+
+[PAPERHOOD IDO · Robinhood Chain mainnet]
+网络 Chain ID：4663
+合约地址：0xeFb74A8EBB0cE4F02e3720E8179D8B960E23Fe94
+名称：PAPERHOOD IDO
+部署交易：0xe6f0a8921d0a651906499e35b03606a841c49a23661a85a53996440f55afe956
+部署区块：93177191
+部署钱包：0xD083f0d09ed4234B92bC8D1607E1fE7550AC7882
+募集资金收款钱包：0x35A25D464e8bfC92f66665d6aB019Fc71Aae1271
+管理员钱包 A：0xE92Fc761286F8b4c83E9F7d9E47D4B0045653154
+资格签名钱包 B：0x4712Af8D8FC28b4378087452E8Ffa3C03ba51A63
+支付代币地址：0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168
+活动标识：0xadb590c1da4993e4b0e76e0433bd09d03cbda23ccbac810a92a2066a2bbd81c4
+浏览器：https://robinhoodchain.blockscout.com/address/0xeFb74A8EBB0cE4F02e3720E8179D8B960E23Fe94
+源码验证：pending
+# IDO 合约，支付币 USDG；软顶 10,000，硬顶 50,000。
+# 发行价格 0.00025 USDG/PHOOD；销售份额 200,000,000 PHOOD。
+# 认购时间：温哥华 2026-10-19 21:40 至 2026-10-26 21:40。
+# 已绑定 PHOOD 并注资 200,000,000 PHOOD；TGE/Vesting 待确认配置。
+详细记录：deployments/4663/ido-paperhood/deployment.json
+
+[PAPERHOOD Airdrop · Robinhood Chain testnet]
+网络 Chain ID：46630
+合约地址：0xf1a64b2905a2d1238E896356F311B63b14110790
+名称：PAPERHOOD Airdrop
+部署交易：0xff83430480fb4e5a8598ef2919428277cb2cd98237b9b0e05812c09edac0c6aa
+部署区块：143794597
+部署钱包：0x218C2b842a10905BCD7DC72e4a9CF1aA87602dC3
+管理员钱包 A：0x218C2b842a10905BCD7DC72e4a9CF1aA87602dC3
+资格签名钱包 B：0x86D5114De38481bb00f815F6Db375077A5D19765
+活动标识：0x1d682ee54b20ca179d91507f71225d3b04f768152f7ea5a6a3adc98f44956f18
+浏览器：https://explorer.testnet.chain.robinhood.com/address/0xf1a64b2905a2d1238E896356F311B63b14110790
+源码验证：已完成
+# 测试网 PHOOD 空投合约，绑定本地 PAPERHOOD 活动 phood。
+# 部署时未结算、未注资、未开放领取；deadline=0。
+详细记录：deployments/46630/airdrop-phood/deployment.json

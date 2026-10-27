@@ -1,0 +1,86 @@
+{
+  "network": "Robinhood Chain mainnet",
+  "chainId": 4663,
+  "name": "PAPERHOOD IDO",
+  "deployer": "0xD083f0d09ed4234B92bC8D1607E1fE7550AC7882",
+  "admin": "0xE92Fc761286F8b4c83E9F7d9E47D4B0045653154",
+  "signer": "0x4712Af8D8FC28b4378087452E8Ffa3C03ba51A63",
+  "fundsTreasury": "0x35A25D464e8bfC92f66665d6aB019Fc71Aae1271",
+  "paymentToken": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+  "campaignId": "0xadb590c1da4993e4b0e76e0433bd09d03cbda23ccbac810a92a2066a2bbd81c4",
+  "sale": [
+    "1792471200",
+    "1793076000",
+    "1000000",
+    "5000000",
+    "4000000000000000000000",
+    "200000000000000000000000000",
+    "1000000000000000000000000000"
+  ],
+  "startUTC": "2026-10-20T04:40:00.000Z",
+  "endUTC": "2026-10-27T04:40:00.000Z",
+  "timeZone": "America/Vancouver",
+  "issuePrice": "0.00025 USDG per PHOOD",
+  "contractAddress": "0xeFb74A8EBB0cE4F02e3720E8179D8B960E23Fe94",
+  "transactionHash": "0xe6f0a8921d0a651906499e35b03606a841c49a23661a85a53996440f55afe956",
+  "nonce": 4,
+  "status": "deployed",
+  "createdAt": "2026-10-20T04:32:43.729Z",
+  "maximumFeeETH": "0.00027417660732",
+  "constructorArguments": "0x000000000000000000000000e92fc761286f8b4c83e9f7d9e47d4b00456531540000000000000000000000004712af8d8fc28b4378087452e8ffa3c03ba51a6300000000000000000000000035a25d464e8bfc92f66665d6ab019fc71aae12710000000000000000000000005fc5360d0400a0fd4f2af552add042d716f1d168adb590c1da4993e4b0e76e0433bd09d03cbda23ccbac810a92a2066a2bbd81c4000000000000000000000000000000000000000000000000000000006ad6f0a0000000000000000000000000000000000000000000000000000000006ae02b2000000000000000000000000000000000000000000000000000000000000f424000000000000000000000000000000000000000000000000000000000004c4b400000000000000000000000000000000000000000000000d8d726b7177a800000000000000000000000000000000000000000000000a56fa5b99019a5c80000000000000000000000000000000000000000000000033b2e3c9fd0803ce8000000",
+  "compiler": {
+    "version": "0.8.30+commit.73712a01"
+  },
+  "compilerSettings": {
+    "remappings": [
+      "@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/"
+    ],
+    "optimizer": {
+      "enabled": true,
+      "runs": 1
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "compilationTarget": {
+      "src/PhoodIDO.sol": "PhoodIDO"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "viaIR": true
+  },
+  "verification": {
+    "status": "pending",
+    "lastAttempt": "Forge blocked by Blockscout Cloudflare challenge",
+    "manualInput": "standard-input.json"
+  },
+  "notes": [
+    "IDO 合约，支付币 USDG；软顶 10,000，硬顶 50,000。",
+    "发行价格 0.00025 USDG/PHOOD；销售份额 200,000,000 PHOOD。",
+    "认购时间：温哥华 2026-10-19 21:40 至 2026-10-26 21:40。",
+    "已绑定 PHOOD 并注资 200,000,000 PHOOD；TGE/Vesting 待确认配置。"
+  ],
+  "blockNumber": 93177191,
+  "gasUsed": "5659540",
+  "transactionFeeETH": "0.000114605685",
+  "runtimeBytes": 24562,
+  "checkedAt": "2026-10-20T04:32:54.146Z",
+  "explorer": "https://robinhoodchain.blockscout.com/address/0xeFb74A8EBB0cE4F02e3720E8179D8B960E23Fe94",
+  "checks": [
+    "owner",
+    "signer",
+    "treasury",
+    "USDG address and decimals",
+    "campaign identity",
+    "all seven sale fields",
+    "pending phase",
+    "no token binding",
+    "zero subscribed",
+    "runtime bytecode except compiler immutable slots"
+  ],
+  "funding": {
+    "token": "0xb0f09c8bEC180aFEFE32C1D5bab1402121a1bBBE",
+    "amountPHOOD": "200000000.0",
+    "record": "funding.json"
+  }
+}

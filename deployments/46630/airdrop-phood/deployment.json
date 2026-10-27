@@ -1,0 +1,46 @@
+{
+  "name": "PAPERHOOD Airdrop",
+  "network": "Robinhood Chain testnet",
+  "chainId": 46630,
+  "status": "deployed",
+  "campaignID": "cp2azzme0n5534",
+  "campaignSlug": "phood",
+  "campaignId": "0x1d682ee54b20ca179d91507f71225d3b04f768152f7ea5a6a3adc98f44956f18",
+  "token": "0x39A717B283A51b7b270f6cbFC4C75d84b64277D8",
+  "deployer": "0x218C2b842a10905BCD7DC72e4a9CF1aA87602dC3",
+  "admin": "0x218C2b842a10905BCD7DC72e4a9CF1aA87602dC3",
+  "signer": "0x86D5114De38481bb00f815F6Db375077A5D19765",
+  "contractAddress": "0xf1a64b2905a2d1238E896356F311B63b14110790",
+  "transactionHash": "0xff83430480fb4e5a8598ef2919428277cb2cd98237b9b0e05812c09edac0c6aa",
+  "nonce": 91,
+  "maximumFeeETH": "0.00003422488",
+  "createdAt": "2026-10-27T20:49:26.472Z",
+  "constructorArguments": "0x000000000000000000000000218c2b842a10905bcd7dc72e4a9cf1aa87602dc31d682ee54b20ca179d91507f71225d3b04f768152f7ea5a6a3adc98f44956f1800000000000000000000000039a717b283a51b7b270f6cbfc4c75d84b64277d800000000000000000000000086d5114de38481bb00f815f6db375077a5d19765",
+  "compiler": {
+    "version": "0.8.30+commit.73712a01"
+  },
+  "verification": {
+    "status": "verified",
+    "source": "blockscout",
+    "checkedAt": "2026-10-27T20:50:18.039Z"
+  },
+  "notes": [
+    "测试网 PHOOD 空投合约，绑定本地 PAPERHOOD 活动 phood。",
+    "部署时未结算、未注资、未开放领取；deadline=0。"
+  ],
+  "blockNumber": 143794597,
+  "gasUsed": "1413650",
+  "transactionFeeETH": "0.0000141365",
+  "checkedAt": "2026-10-27T20:49:35.386Z",
+  "explorer": "https://explorer.testnet.chain.robinhood.com/address/0xf1a64b2905a2d1238E896356F311B63b14110790",
+  "checks": [
+    "chain ID",
+    "deployment receipt and code",
+    "version",
+    "owner",
+    "campaign hash",
+    "token",
+    "signer",
+    "initial distribution closed to claims"
+  ]
+}

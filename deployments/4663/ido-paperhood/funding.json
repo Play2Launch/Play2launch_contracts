@@ -1,0 +1,20 @@
+{
+  "steps": {
+    "bind-token": {
+      "hash": "0xd8660bfe30c24dbd5e681eb8aface4db539b93e092e7cd12c0b0875ce3e08f27",
+      "status": "confirmed",
+      "blockNumber": 93178792,
+      "feeETH": "0.0000012140368"
+    },
+    "fund-token": {
+      "hash": "0xaac462ebde47be4a3d44c81407dadbb5f44c3630a569eeb9e2fb385622255aae",
+      "status": "confirmed",
+      "blockNumber": 93178888,
+      "feeETH": "0.000001035419882"
+    }
+  },
+  "ido": "0xeFb74A8EBB0cE4F02e3720E8179D8B960E23Fe94",
+  "token": "0xb0f09c8bEC180aFEFE32C1D5bab1402121a1bBBE",
+  "fundedPHOOD": "200000000.0",
+  "checkedAt": "2026-10-20T04:36:00.794Z"
+}
